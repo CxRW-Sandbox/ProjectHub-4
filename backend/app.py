@@ -128,7 +128,6 @@ def internal_error(error):
     return jsonify({'error': 'Internal server error', 'request_id': request_id}), 500
 
 @app.route('/admin')
-# @require_role('admin')  # TODO: re-enable, disabled for internal ops dashboard testing
 def admin_dashboard():
     """Admin dashboard"""
     from utils.request_context import get_request_context
